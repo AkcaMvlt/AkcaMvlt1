@@ -3,63 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <title>Turis Tv</title>
-  <link rel="stylesheet" href="./style.css">
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
-
 <!-- partial:index.partial.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Login page</title>
-
-</head>
-<body>
-  <div class="div1"> 
-    <div class="div2">
-      
-      
-    <form>
-        <label for="pswd">Şifre Gir </label>
-      </br>
-        <input type="password" id="pswd" class="box">
-      </br>
-        <input type="button" value="Giriş Yapınız" onclick="checkPswd();"                              class="confirm" />
-    </form>
-    </div>
-  </div>
-<!--Function to check password the already set password is admin-->
+<!-- Redirection Counter -->
 <script type="text/javascript">
-    function checkPswd() {
-        var confirmPassword = "2430";
-        var password = document.getElementById("pswd").value;
-        if (password == confirmPassword) {
-             window.location="https://www.speedquizzing.com";
-        window.location="https://akcamvlt.github.io/Ayip.io/";
-        }
-        else{
-            alert("Şifre yanlış");
-        }
+  var count = 10; // Timer
+  var redirect = "https://akcamvlt.github.io/Ayip.io/"; // Target URL
+
+  function countDown() {
+    var timer = document.getElementById("timer"); // Timer ID
+    if (count > 0) {
+      count--;
+      timer.innerHTML = " " + count + " Saniye."; // Timer Message
+      setTimeout("countDown()", 1000);
+    } else {
+      window.location.href = redirect;
     }
+  }
 </script>
-      
-   
-</body>
-<style type="text/css">
-body
-{
-background-image:url('https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg');
-background-repeat:no-repeat;
-background-attachment:fixed;
-background-position:center;
-}
 
+<div id="master-wrap">
+  <div id="logo-box">
 
+    <div class="animated fast fadeInUp">
+      <div class="icon"></div>
+      <h1>Teşekkürler</h1>
+    </div>
 
+    <div class="notice animated fadeInUp">
+      <p class="lead">10 Saniye Sonra Siteye Yönelecek</p>
+      <a class="btn animation" href="javascript:history.back()">&larr; + 18 İçerikli</a>
+    </div>
 
+    <div class="footer animated slow fadeInUp">
+      <p id="timer">
+        <script type="text/javascript">
+          countDown();
+        </script>
+      </p>
+      <p class="copyright">&copy; Turis Tv</p>
+    </div>
 
-</html
+  </div>
+  <!-- /#logo-box -->
+</div>
+<!-- /#master-wrap -->
 <!-- partial -->
   
 </body>
